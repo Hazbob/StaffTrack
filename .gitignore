@@ -1,0 +1,9 @@
+/BootsTrackr.sln
+BootsTrackr/obj/*
+*.o
+*.out
+*.exe
+*.dll
+/bin/
+/obj/
+
