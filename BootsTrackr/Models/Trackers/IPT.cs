@@ -4,7 +4,7 @@ namespace BootsTrackr.Models.Trackers
     {
         public double Amount { get; set; }
         
-        public IPT(int employeeId, int week, double amount) : base(employeeId, week)
+        public IPT(int employeeId, int weekOfYear, double amount) : base(employeeId, weekOfYear)
         {
             Amount = amount;
         }
