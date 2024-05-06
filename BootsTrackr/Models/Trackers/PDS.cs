@@ -4,7 +4,7 @@ namespace BootsTrackr.Models.Trackers
     {
         public int Quantity { get; set; }
         
-        public PDS(int employeeId, int week, int quantity) : base(employeeId, week)
+        public PDS(int employeeId, int weekOfYear, int quantity) : base(employeeId, weekOfYear)
         {
             Quantity = quantity;
         }
