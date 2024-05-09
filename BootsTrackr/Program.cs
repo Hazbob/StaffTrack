@@ -20,6 +20,8 @@ builder.Services.AddDbContext<TrackerContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<ITrackerRepository, TrackerRepository>();
+builder.Services.AddScoped<ITrackerService, TrackerService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
