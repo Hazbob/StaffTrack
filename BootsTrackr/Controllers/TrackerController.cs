@@ -49,8 +49,16 @@ namespace BootsTrackr.Controllers
         [HttpPost("tracker/atv/{employeeId}")]
         public async Task<IActionResult> AddEmployeeAtv([FromRoute] int employeeId, [FromBody]AddTrackerRequestDTO body)
         {
-           await _trackerService.AddEmployeeAtv(employeeId, body);
-            return Ok("TrackerAdded");
+            try
+            {
+               await _trackerService.AddEmployeeAtv(employeeId, body);
+                return Ok("TrackerAdded");
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
         
         [HttpPost("tracker/ipt/{employeeId}")]
